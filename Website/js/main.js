@@ -1,4 +1,3 @@
-
 (function ($) {
     "use strict";
 
@@ -26,7 +25,16 @@
 				type: 'get',
 				success: function(result)
 				{
-					$('#susmessage').text(result)
+					//$('#susmessage').text(result)
+
+                    swal({
+                        icon: 'success',
+                        title: 'Hi, User',
+                        text: result,
+                        button:'Done'
+                    }).then(function(){
+                        window.location="#";
+                    });
 				}
 			});
 
@@ -52,7 +60,15 @@
 				type: 'get',
 				success: function(result)
 				{
-					$('#unsusmessage').text(result)
+					// $('#unsusmessage').text(result)
+                    swal({
+                        icon: 'success',
+                        title: 'Hi, User',
+                        text: result,
+                        button:'Done'
+                    }).then(function(){
+                        window.location="#";
+                    });
 				}
 			});
 
